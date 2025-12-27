@@ -355,6 +355,15 @@ button:focus {
     font-size: 1.02em;
   }
 
+  .home-about-title {
+    font-size: 2.1em;
+    line-height: 1.12;
+  }
+
+  .home-about-cards {
+    grid-template-columns: 1fr;
+  }
+
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
@@ -381,6 +390,131 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+}
+
+.home-about-section .myAvtar {
+  padding-top: 3em !important;
+}
+
+.home-about-hero {
+  text-align: left !important;
+}
+
+.home-about-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(205, 95, 248, 0.25);
+  background: rgba(10, 4, 22, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.home-about-badge-text {
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  opacity: 0.9;
+}
+
+.home-about-title {
+  margin-top: 18px;
+  font-size: 2.8em;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.home-about-meta {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  opacity: 0.95;
+}
+
+.home-about-meta-sep {
+  opacity: 0.7;
+}
+
+.home-about-lede {
+  margin-top: 18px;
+  margin-bottom: 0;
+  max-width: 62ch;
+  font-size: 1.1em;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.home-about-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-about-btn {
+  padding: 0.55rem 1.1rem !important;
+  border-radius: 10px !important;
+}
+
+.home-about-btn-outline {
+  background-color: transparent !important;
+  border: 1px solid #623686 !important;
+}
+
+.home-about-btn-outline:hover {
+  background-color: #6d20c5d7 !important;
+  border-color: #6d20c5d7 !important;
+}
+
+.home-about-cards {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-about-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(205, 95, 248, 0.16);
+  border-radius: 14px;
+  padding: 14px 14px;
+}
+
+.home-about-card-title {
+  margin: 0;
+  font-size: 1.05em;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.home-about-chips {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-about-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(205, 95, 248, 0.22);
+  background: rgba(205, 95, 248, 0.08);
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+.home-about-list {
+  margin-top: 10px;
+}
+
+.home-about-list-item {
+  padding: 6px 0;
+  opacity: 0.95;
 }
 
 .home-about-description {

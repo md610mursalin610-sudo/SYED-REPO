@@ -14,9 +14,17 @@ function Home2() {
     name: "Abu Shaid Islam",
     headline: "Full-Stack Developer",
     location: "Bangladesh",
+    summary:
+      "I build modern web apps with a focus on clean UI, performance, and maintainable code. I enjoy turning ideas into production-ready products.",
     primarySkills: ["JavaScript", "React", "Node.js"],
     secondarySkills: ["Next.js", "Go", "C++"],
     interests: ["Web Products", "APIs", "Blockchain"],
+    highlights: [
+      "Responsive UI with accessible components",
+      "REST APIs and server-side integrations",
+      "Code quality: reusable patterns and scalable structure",
+    ],
+    currently: ["Next.js", "System design", "Performance optimization"],
     socials: {
       github: "https://github.com/abushaidislam",
       twitter: "https://twitter.com/abushaidislam",
@@ -36,51 +44,91 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 className="mb-3" style={{ fontSize: "2.4em" }}>
-              Hi, I&apos;m <span className="purple">{profile.name}</span>
+          <Col md={8} className="home-about-description home-about-hero">
+            <div className="home-about-badge">
+              <span className="home-about-badge-text">ABOUT ME</span>
+            </div>
+
+            <h1 className="home-about-title">
+              I&apos;m <span className="purple">{profile.name}</span>
+              <br />
+              Building <span className="main-name">web products</span> people
+              enjoy using.
             </h1>
-            <h2 className="mb-4" style={{ fontSize: "1.25em", opacity: 0.95 }}>
-              {profile.headline} <span style={{ opacity: 0.85 }}>·</span>{" "}
-              <span style={{ opacity: 0.9 }}>{profile.location}</span>
-            </h2>
 
-            <p className="home-about-body" style={{ fontSize: "1.05em" }}>
-              I build modern web experiences and scalable back-end services.
-              <br />
-              <br />I work primarily with{" "}
-              <i>
-                <b className="purple"> {profile.primarySkills.join(", ")} </b>
-              </i>
-              , and I&apos;m also comfortable with{" "}
-              <i>
-                <b className="purple"> {profile.secondarySkills.join(", ")} </b>
-              </i>
-              .
-              <br />
-              <br />I&apos;m interested in building{" "}
-              <i>
-                <b className="purple">{profile.interests.join(", ")}</b>
-              </i>
-              , focusing on clean UI, performance, and maintainable code.
-            </p>
+            <div className="home-about-meta">
+              <span className="home-about-meta-item">
+                <span className="purple">{profile.headline}</span>
+              </span>
+              <span className="home-about-meta-sep">·</span>
+              <span className="home-about-meta-item">{profile.location}</span>
+            </div>
 
-            <div style={{ marginTop: "1.25rem" }}>
-              <h3 style={{ fontSize: "1.2em" }}>
-                What I&apos;m focused on
-              </h3>
-              <div className="home-about-body" style={{ fontSize: "1.02em" }}>
-                <div>
-                  <b className="purple">·</b> Building responsive, accessible UIs
-                  with React
+            <p className="home-about-lede">{profile.summary}</p>
+
+            <div className="home-about-actions">
+              <a
+                href={profile.socials.github}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary home-about-btn"
+              >
+                View GitHub
+              </a>
+              <a
+                href={profile.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary home-about-btn home-about-btn-outline"
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
+
+            <div className="home-about-cards">
+              <div className="home-about-card">
+                <h3 className="home-about-card-title">Core stack</h3>
+                <div className="home-about-chips">
+                  {[...profile.primarySkills, ...profile.secondarySkills].map(
+                    (skill) => (
+                      <span key={skill} className="home-about-chip">
+                        {skill}
+                      </span>
+                    )
+                  )}
                 </div>
-                <div>
-                  <b className="purple">·</b> Designing APIs and services with
-                  Node.js
+              </div>
+
+              <div className="home-about-card">
+                <h3 className="home-about-card-title">Highlights</h3>
+                <div className="home-about-list">
+                  {profile.highlights.map((item) => (
+                    <div key={item} className="home-about-list-item">
+                      <span className="purple">·</span> {item}
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <b className="purple">·</b> Learning and shipping real-world
-                  projects consistently
+              </div>
+
+              <div className="home-about-card">
+                <h3 className="home-about-card-title">Interested in</h3>
+                <div className="home-about-chips">
+                  {profile.interests.map((item) => (
+                    <span key={item} className="home-about-chip">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="home-about-card">
+                <h3 className="home-about-card-title">Currently</h3>
+                <div className="home-about-chips">
+                  {profile.currently.map((item) => (
+                    <span key={item} className="home-about-chip">
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
