@@ -13,20 +13,33 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
+              <div className="home-hero">
+                <div className="home-hero-badge">
+                  <span className="home-hero-badge-text">
+                    Hi There{" "}
+                    <span className="wave" role="img" aria-labelledby="wave">
+                      👋🏻
+                    </span>
+                    {" "}I&apos;m <span className="main-name">Abu Syed</span>
+                  </span>
+                </div>
 
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> Abu Syed</strong>
-              </h1>
+                <h1 className="home-hero-title">
+                  YOUR <span className="purple">IDEAS.</span>
+                  <br />
+                  YOUR <span className="purple">VISION.</span>
+                  <br />
+                  YOUR <span className="main-name">PRODUCT.</span>
+                </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
-                <Type />
+                <p className="home-hero-subtitle">
+                  I build clean, responsive web experiences and reliable
+                  back-end services.
+                </p>
+
+                <div className="home-hero-type">
+                  <Type />
+                </div>
               </div>
             </Col>
 

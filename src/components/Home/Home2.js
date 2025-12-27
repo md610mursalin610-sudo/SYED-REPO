@@ -10,101 +10,114 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
+  const profile = {
+    name: "Abu Shaid Islam",
+    headline: "Full-Stack Developer",
+    location: "Bangladesh",
+    primarySkills: ["JavaScript", "React", "Node.js"],
+    secondarySkills: ["Next.js", "Go", "C++"],
+    interests: ["Web Products", "APIs", "Blockchain"],
+    socials: {
+      github: "https://github.com/abushaidislam",
+      twitter: "https://twitter.com/abushaidislam",
+      linkedin: "https://www.linkedin.com/in/abushaidislam/",
+      instagram: "https://www.instagram.com/abushaidislam",
+    },
+  };
+
+  const socialLinks = [
+    { href: profile.socials.github, label: "GitHub", Icon: AiFillGithub },
+    { href: profile.socials.twitter, label: "Twitter", Icon: AiOutlineTwitter },
+    { href: profile.socials.linkedin, label: "LinkedIn", Icon: FaLinkedinIn },
+    { href: profile.socials.instagram, label: "Instagram", Icon: AiFillInstagram },
+  ];
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            <h1 className="mb-3" style={{ fontSize: "2.4em" }}>
+              Hi, I&apos;m <span className="purple">{profile.name}</span>
             </h1>
-            <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            <h2 className="mb-4" style={{ fontSize: "1.25em", opacity: 0.95 }}>
+              {profile.headline} <span style={{ opacity: 0.85 }}>·</span>{" "}
+              <span style={{ opacity: 0.9 }}>{profile.location}</span>
+            </h2>
+
+            <p className="home-about-body" style={{ fontSize: "1.05em" }}>
+              I build modern web experiences and scalable back-end services.
               <br />
-              <br />I am fluent in classics like
+              <br />I work primarily with{" "}
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> {profile.primarySkills.join(", ")} </b>
               </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
+              , and I&apos;m also comfortable with{" "}
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
+                <b className="purple"> {profile.secondarySkills.join(", ")} </b>
               </i>
+              .
               <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              <br />I&apos;m interested in building{" "}
               <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
+                <b className="purple">{profile.interests.join(", ")}</b>
               </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              , focusing on clean UI, performance, and maintainable code.
             </p>
+
+            <div style={{ marginTop: "1.25rem" }}>
+              <h3 style={{ fontSize: "1.2em" }}>
+                What I&apos;m focused on
+              </h3>
+              <div className="home-about-body" style={{ fontSize: "1.02em" }}>
+                <div>
+                  <b className="purple">·</b> Building responsive, accessible UIs
+                  with React
+                </div>
+                <div>
+                  <b className="purple">·</b> Designing APIs and services with
+                  Node.js
+                </div>
+                <div>
+                  <b className="purple">·</b> Learning and shipping real-world
+                  projects consistently
+                </div>
+              </div>
+            </div>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt={`${profile.name} avatar`}
+                style={{ maxWidth: "280px" }}
+              />
             </Tilt>
           </Col>
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
+            <h1 className="mb-2">Let&apos;s connect</h1>
+            <p style={{ marginBottom: "0.75rem" }}>
+              Feel free to reach out for opportunities, collaborations, or a quick
+              chat.
             </p>
             <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/abushaidislam"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/abushaidislam"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/abushaidislam/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/abushaidislam"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+              {socialLinks.map(({ href, label, Icon }) => (
+                <li key={label} className="social-icons">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    title={label}
+                    className="icon-colour home-social-icons"
+                  >
+                    <Icon />
+                  </a>
+                </li>
+              ))}
             </ul>
           </Col>
         </Row>
