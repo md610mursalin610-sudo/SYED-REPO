@@ -17,14 +17,15 @@ function Home2() {
     summary:
       "I build modern web apps with a focus on clean UI, performance, and maintainable code. I enjoy turning ideas into production-ready products.",
     primarySkills: ["JavaScript", "React", "Node.js"],
-    secondarySkills: ["Next.js", "Go", "C++"],
-    interests: ["Web Products", "APIs", "Blockchain"],
+    secondarySkills: ["Next.js", "WordPress", "Figma"],
+    interests: ["Web Products", "APIs", "Blockchain", "Product Design"],
     highlights: [
       "Responsive UI with accessible components",
       "REST APIs and server-side integrations",
-      "Code quality: reusable patterns and scalable structure",
+      "Custom WordPress themes tailored to business goals",
+      "Professional Figma workflows for fast iterations",
     ],
-    currently: ["Next.js", "System design", "Performance optimization"],
+    currently: ["Next.js", "System design", "Performance optimization", "Figma handoff best practices"],
     socials: {
       github: "https://github.com/abushaidislam",
       twitter: "https://twitter.com/abushaidislam",
