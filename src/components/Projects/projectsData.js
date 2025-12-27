@@ -8,6 +8,16 @@ import my from "../../Assets/Projects/my.png";
 
 export const projects = [
   {
+    imgPath: my,
+    isBlog: false,
+    title: "ReadOft: Where Readers, Writers & Ideas Connect",
+    description:
+      "ReadOft is a modern, community-driven reading and blogging platform designed to bring readers and writers together in a clean,focused environment.It allows users to discover high-quality articles, follow authors, explore topics, and track their reading progress through a personalized dashboard.With a strong emphasis on usability, performance, and thoughtful UI/UX, ReadOft promotes meaningful content over noise and builds a sustainable knowledge-sharing community.",
+    ghLink: "https://github.com/abushaidislam/readoft_9800.git",
+    demoLink: "https://readoft-9800.vercel.app/",
+    demoLavel: "live site",
+  },
+  {
     imgPath: chatify,
     isBlog: false,
     title: "Chatify",
@@ -59,14 +69,5 @@ export const projects = [
       "Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%. Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person.",
     ghLink: "https://github.com/soumyajit4419/Face_And_Emotion_Detection",
   },
-  {
-    imgPath: my,
-    isBlog: false,
-    title: "ReadOft: Where Readers, Writers & Ideas Connect",
-    description:
-      "ReadOft is a modern, community-driven reading and blogging platform designed to bring readers and writers together in a clean,focused environment.It allows users to discover high-quality articles, follow authors, explore topics, and track their reading progress through a personalized dashboard.With a strong emphasis on usability, performance, and thoughtful UI/UX, ReadOft promotes meaningful content over noise and builds a sustainable knowledge-sharing community.",
-    ghLink: "https://github.com/abushaidislam/readoft_9800.git",
-    demoLink: "https://readoft-9800.vercel.app/",
-    demoLavel: "live site",
-  }
+  
 ];
