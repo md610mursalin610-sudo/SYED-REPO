@@ -37,6 +37,13 @@ export default async function BlogPostPage({ params }) {
           <article className="blog-content">
             <h1 className="blog-title">{post.frontmatter.title}</h1>
             <p className="blog-date">{post.frontmatter.date}</p>
+            {post.frontmatter.thumbnail ? (
+              <img
+                className="blog-hero"
+                src={post.frontmatter.thumbnail}
+                alt={post.frontmatter.title || "Blog post thumbnail"}
+              />
+            ) : null}
             {content}
           </article>
 

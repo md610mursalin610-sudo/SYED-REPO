@@ -49,7 +49,7 @@ Fill only the fields you have:
 
 ---
 
-## Adding a Blog Post (MDX)
+# Adding a Blog Post (MDX)
 
 Follow these steps every time you want to publish a new article.
 
