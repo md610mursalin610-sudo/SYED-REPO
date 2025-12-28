@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -5,8 +7,9 @@ import Particle from "../Particle";
 import pdf from "../../Assets/CV Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 
-const previewImage = `${process.env.PUBLIC_URL || ""}/cv-preview.png`;
-const pdfUrl = encodeURI(pdf);
+const previewImage = "/cv-preview.png";
+const pdfHref = typeof pdf === "string" ? pdf : (pdf && pdf.src) || "";
+const pdfUrl = encodeURI(pdfHref);
 
 function ResumeNew() {
   const handleDownload = () => {

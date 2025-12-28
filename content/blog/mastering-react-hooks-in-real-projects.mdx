@@ -1,0 +1,53 @@
+---
+title: "Mastering React Hooks in Real Projects"
+description: "Practical patterns for hooks usage: memoization, effects, and custom hooks you’ll actually ship."
+date: "2025-02-01"
+thumbnail: "/i.png"
+tags:
+  - React
+  - Hooks
+  - Frontend
+---
+
+![Hooks notes](/i.png)
+
+## Why hooks feel easy—until they don’t
+
+Hooks are simple in tutorials, but production code adds:
+
+- more state
+- more renders
+- more async work
+- more components sharing the same logic
+
+The goal is not “use hooks everywhere”—the goal is **predictable UI with minimal re-renders**.
+
+## The 3 rules I follow
+
+### 1. Use `useMemo` for expensive work, not for everything
+
+```js
+const filtered = useMemo(() => {
+  return items.filter((x) => x.enabled);
+}, [items]);
+```
+
+If the computation is cheap, memoization may add complexity without benefits.
+
+### 2. Keep effects small and focused
+
+One effect = one responsibility.
+
+### 3. Extract custom hooks when logic repeats
+
+When you see the same `useEffect` + `useState` pattern in 2 places, it’s time.
+
+## Quick checklist
+
+- Do you have stable dependencies?
+- Are you closing over stale values?
+- Can the state live higher up?
+
+## Wrap up
+
+If you want smooth UX, start by measuring renders with React DevTools Profiler, then optimize only the hotspots.

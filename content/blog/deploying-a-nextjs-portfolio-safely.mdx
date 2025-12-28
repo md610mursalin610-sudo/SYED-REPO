@@ -1,0 +1,44 @@
+---
+title: "Deploying a Next.js Portfolio Safely"
+description: "A practical deployment checklist: assets, routing, SEO, and avoiding broken links."
+date: "2025-02-06"
+thumbnail: "/Screenshot%202025-12-27%20185205.png"
+tags:
+  - Next.js
+  - Deployment
+  - Portfolio
+---
+
+![Deployment checklist](/Screenshot%202025-12-27%20185205.png)
+
+## Before you deploy
+
+### Validate routes
+
+- Home: `/`
+- Projects: `/project`
+- Blog list: `/blog`
+- Blog post: `/blog/[slug]`
+
+### Check assets in `public/`
+
+- images referenced by URL should exist
+- filenames with spaces should be avoided (or URL-encoded)
+
+## SEO basics
+
+- meaningful titles
+- descriptions for posts
+- readable URLs (slugs)
+
+## A small habit that saves hours
+
+Open your site and click everything like a user would:
+
+- navbar links
+- blog cards
+- buttons (GitHub/Live)
+
+## Wrap up
+
+Deploying is the easy part. Preventing regressions is the real skill—use checklists, keep changes small, and test the critical paths.
