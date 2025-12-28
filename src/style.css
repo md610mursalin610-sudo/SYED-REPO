@@ -753,14 +753,15 @@ button:focus {
 .blog-page-header {
   margin-top: 18px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 24px;
+  flex-wrap: nowrap;
 }
 
 .blog-page-title {
-  min-width: min(520px, 100%);
+  flex: 1;
+  min-width: 260px;
 }
 
 .blog-page-subtitle {
@@ -772,17 +773,32 @@ button:focus {
   margin-top: 6px;
   margin-bottom: 0;
   justify-content: flex-end;
+  flex-wrap: nowrap;
+  flex: 1;
+  min-width: 280px;
 }
 
 .blog-search-field {
   position: relative;
   flex: 1;
-  min-width: min(520px, 100%);
+  min-width: 0;
+}
+
+.blog-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1em;
+  opacity: 0.75;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .blog-search-input {
   width: 100%;
   padding: 10px 12px;
+  padding-left: 40px;
   padding-right: 38px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -821,6 +837,8 @@ button:focus {
   background: rgba(20, 18, 35, 0.92);
   backdrop-filter: blur(10px);
   overflow: hidden;
+  max-height: 260px;
+  overflow-y: auto;
 }
 
 .blog-search-suggestion {
@@ -871,11 +889,42 @@ button:focus {
   background: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.95em;
+  white-space: nowrap;
 }
 
 .blog-search-empty {
   margin-top: 14px;
   color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+  .blog-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .blog-page-title {
+    min-width: 100%;
+  }
+
+  .blog-search--inline {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-search--inline {
+    flex-wrap: wrap;
+  }
+
+  .blog-search-field {
+    min-width: 100%;
+  }
+
+  .blog-search-meta {
+    width: 100%;
+    text-align: right;
+  }
 }
 
 .blog-grid-item {

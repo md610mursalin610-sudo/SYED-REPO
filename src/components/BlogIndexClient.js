@@ -125,6 +125,33 @@ export default function BlogIndexClient({ posts }) {
 
         <div className="blog-search blog-search--inline">
           <div className="blog-search-field">
+            <span className="blog-search-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 512 512"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle
+                  cx="224"
+                  cy="224"
+                  r="144"
+                  stroke="currentColor"
+                  strokeWidth="32"
+                  fill="none"
+                />
+                <line
+                  x1="338"
+                  y1="338"
+                  x2="480"
+                  y2="480"
+                  stroke="currentColor"
+                  strokeWidth="48"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
             <input
               className="blog-search-input"
               value={query}
