@@ -15,7 +15,15 @@ export const projects = [
       "ReadOft is a modern, community-driven reading and blogging platform designed to bring readers and writers together in a clean,focused environment.It allows users to discover high-quality articles, follow authors, explore topics, and track their reading progress through a personalized dashboard.With a strong emphasis on usability, performance, and thoughtful UI/UX, ReadOft promotes meaningful content over noise and builds a sustainable knowledge-sharing community.",
     ghLink: "https://github.com/abushaidislam/readoft_9800.git",
     demoLink: "https://readoft-9800.vercel.app/",
-    demoLavel: "live site",
+    demoLabel: "live site",
+  },
+  {
+    imgPath: bitsOfCode,
+    isBlog: false,
+    title: "Blog Project",
+    description:
+      "A blog-focused project showcasing clean UI, responsive layout, and well-structured content pages. (Update title/description/links with your exact project details.)",
+    ghLink: "https://github.com/abushaidislam",
   },
   {
     imgPath: chatify,
