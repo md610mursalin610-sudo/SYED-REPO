@@ -1,0 +1,64 @@
+---
+title: "Designing Consistent Cards in Next.js"
+description: "How to keep card size consistent across different thumbnails and content lengths."
+date: "2025-02-03"
+thumbnail: "/Screenshot%202025-10-01%20232733.png"
+author: "Abushaid Islam SYed"
+categories:
+  - Next.js
+  - Images
+  - Royal
+tags:
+  - Next.js
+  - UI
+  - CSS
+---
+
+
+
+## The problem
+
+In a grid layout, cards often break when:
+
+- thumbnails have different aspect ratios
+- titles are longer
+- excerpts vary a lot
+
+## A reliable approach
+
+
+
+### 1. Fix the card width, not the content
+
+Use a grid column size (example: 438px) and center items.
+
+### 2. Crop images consistently
+
+```css
+.card-thumb {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+```
+
+### 3. Let content fill the rest
+
+Make the card a flex column and push actions to the bottom.
+
+```css
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 657px;
+}
+.actions {
+  margin-top: auto;
+}
+```
+
+## Result
+
+- same visual rhythm
+- better scan-ability
+- cleaner portfolio/blog appearance

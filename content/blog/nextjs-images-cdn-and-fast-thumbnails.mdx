@@ -1,0 +1,48 @@
+---
+title: "Next.js Images: Fast Thumbnails That Don’t Break Layout"
+description: "Make thumbnails consistent with object-fit, and keep image payloads light for better performance."
+date: "2025-02-14"
+thumbnail: "/Screenshot%202025-12-27%20185713.png"
+author: "Md. Asifur Rahman"
+categories:
+  - Next.js
+  - Images
+tags:
+  - Next.js
+  - Images
+  - Performance
+---
+
+![Image optimization](/Screenshot%202025-12-27%20185713.png)
+
+## The goal
+
+- consistent grid layout
+- crisp images
+- smaller payloads
+
+## Card thumbnails: the practical setup
+
+### Use cropping instead of stretching
+
+```css
+.thumb {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+```
+
+### Keep files smaller
+
+- export at reasonable resolution
+- compress PNG/JPG
+- prefer modern formats if possible
+
+## Don’t forget caching
+
+Static assets served from `public/` are cacheable on most hosts.
+
+## Wrap up
+
+Images are usually the biggest performance cost on a portfolio. Fixing thumbnails gives you instant visual consistency and faster loads.

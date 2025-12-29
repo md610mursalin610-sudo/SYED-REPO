@@ -1,0 +1,30 @@
+---
+title: "React useMemo Deep Dive"
+description: "Practical guidance on when useMemo helps—and when it hurts."
+date: "2025-12-10"
+thumbnail: "/cv-preview.png"
+---
+
+## Why useMemo exists
+
+React re-renders often. `useMemo` caches computed values.
+
+![Preview](/cv-preview.png)
+
+## The real cost
+
+### Memory vs CPU
+
+```js
+import { useMemo } from "react";
+
+export function Example({ data }) {
+  const expensive = useMemo(() => heavyCompute(data), [data]);
+  return <div>{expensive}</div>;
+}
+```
+
+## Takeaways
+
+- Prefer readability first
+- Measure before optimizing
