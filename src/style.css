@@ -18,8 +18,33 @@ html {
   color: var(--imp-text-color) !important;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 1000000;
+  background: #0c0513;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 12px;
+  outline: 2px solid var(--imp-text-color);
+  outline-offset: 4px;
+}
+
 button:focus {
   box-shadow: none !important;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--imp-text-color);
+  outline-offset: 3px;
 }
 
 /* --------- */

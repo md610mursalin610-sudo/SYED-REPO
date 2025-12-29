@@ -185,7 +185,12 @@ function ResumeNew() {
             <div className="resume-side-card">
               <div className="resume-side-header">
                 <div className="resume-side-avatar">
-                  <img src={myImg} alt={`${profile.name} avatar`} />
+                  <img
+                    src={myImg}
+                    alt={`${profile.name} avatar`}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div>
                   <div className="resume-side-name">{profile.name.toUpperCase()}</div>
@@ -218,7 +223,12 @@ function ResumeNew() {
                 </div>
 
                 <div className="resume-side-preview">
-                  <img src={previewImage} alt="CV preview" loading="lazy" />
+                  <img
+                    src={previewImage}
+                    alt="CV preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
 
                 <Button variant="primary" onClick={handleDownload} className="resume-side-download">

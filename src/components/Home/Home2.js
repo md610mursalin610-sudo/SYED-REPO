@@ -129,6 +129,8 @@ function Home2() {
                 src={myImg}
                 className="img-fluid"
                 alt={`${profile.name} avatar`}
+                loading="lazy"
+                decoding="async"
                 style={{ maxWidth: "280px" }}
               />
             </Tilt>
