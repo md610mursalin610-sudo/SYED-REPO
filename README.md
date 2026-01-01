@@ -1,76 +1,110 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
+# Portfolio Website v2.0
+
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
 </div>
 
 <br/>
 
-<center>
+<div align="center">
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+[![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Open Source](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+[![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)](https://github.com/soumyajit4419/Portfolio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)](https://github.com/soumyajit4419/Portfolio/network/members)
 
-</center>
+</div>
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+## Introduction
 
-## TL;DR
+This is the repository for my personal portfolio website, [soumyajit.tech](https://soumyajit.vercel.app/). It's a modern, responsive, and feature-rich application designed to showcase my projects, skills, and experience.
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+## Key Features
 
-## Built With
+- **Multi-Page Layout:** A clean and intuitive multi-page design.
+- **Responsive Design:** Fully responsive and optimized for all screen sizes.
+- **MDX Powered Blog:** A built-in blog with support for Markdown (MDX).
+- **Custom Components:** A rich set of custom components for a unique user experience.
+- **Animations:** Smooth and engaging animations with Framer Motion.
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+## Tech Stack
 
-This project was built using these technologies.
+This project is built with a modern tech stack, including:
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Content:** [MDX](https://mdxjs.com/)
 
-## Features
+## Installation
 
-**📖 Multi-Page Layout**
+To run this project locally, you'll need to have [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/) installed.
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+1. **Clone the repository:**
 
-**📱 Fully Responsive**
+   ```bash
+   git clone https://github.com/soumyajit4419/Portfolio.git
+   ```
 
-## Getting Started
+2. **Navigate to the project directory:**
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+   ```bash
+   cd Portfolio
+   ```
 
-## 🛠 Installation and Setup Instructions
+3. **Install the dependencies:**
 
-1. Installation: `npm install`
+   ```bash
+   npm install
+   ```
 
-2. In the project directory, you can run: `npm start`
+4. **Run the development server:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+   ```bash
+   npm run dev
+   ```
 
-## Usage Instructions
+The application will be available at `http://localhost:3000`.
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+## Usage
 
-### Show your support
+To customize the portfolio, you can edit the components in the `src/components` directory and the content in the `content` directory. The blog posts are written in MDX and can be found in the `content/blog` directory.
 
-Give a ⭐ if you like this website!
+## Folder Structure
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+```
+.
+├── content
+│   ├── blog
+│   └── projects
+├── public
+│   └── ...
+├── src
+│   ├── app
+│   ├── components
+│   └── lib
+├── .gitignore
+├── next.config.js
+├── package.json
+└── README.md
+```
+
+- **`content`:** Contains the MDX files for the blog posts and project descriptions.
+- **`public`:** Contains the static assets, such as images and fonts.
+- **`src/app`:** The main application directory, following the Next.js App Router structure.
+- **`src/components`:** The custom React components used throughout the application.
+- **`src/lib`:** Utility functions and helper scripts.
+
+## Contribution Guidelines
+
+Contributions are welcome! If you have any suggestions or find any bugs, please feel free to open an issue or submit a pull request.
+
+### Show Your Support
+
+If you like this project, please give it a ⭐ to show your support!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
